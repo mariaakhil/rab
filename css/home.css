@@ -1,0 +1,1202 @@
+/* top thin blue line like in the screenshot */
+
+
+/* logo sizing */
+.nav-logo {
+  height: 38px;   /* adjust to your logo */
+  width: auto;
+}
+
+/* nav links styling */
+.main-navbar .nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  gap: 22px;
+}
+.main-navbar .navbar-nav .nav-item {
+  margin-right: 22px;   /* increase or decrease spacing */
+}
+
+.main-navbar .navbar-nav .nav-item:last-child {
+  margin-right: 0;       /* remove margin on the last item */
+}
+
+.main-navbar .nav-link:hover {
+  color: #042655;
+}
+
+
+
+/* make dropdown caret subtle */
+.main-navbar .dropdown-toggle::after {
+  margin-left: 0.35rem;
+}
+
+/* body padding so content not hidden behind fixed-top */
+body {
+  padding-top: 70px; /* adjust to navbar height */
+}
+
+/* small screens spacing */
+@media (max-width: 991.98px) {
+  .main-navbar .nav-link {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+  }
+}
+
+
+
+.main-navbar .nav-link::after {
+  content: none;
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: -6px;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+
+/* on hover / active: show short line (e.g. 28px) */
+.main-navbar .nav-link:hover::after,
+.main-navbar .nav-link.active::after {
+  width: 28px;
+}
+ 
+/* Hide underline in mobile view */
+@media (max-width: 991.98px) {
+  .main-navbar .nav-link::after {
+    content: none;
+  }
+}
+
+
+
+
+
+/* whole section */
+
+
+/* left slider column */
+.hero-text-slider {
+  min-height: 480px;          /* adjust as needed */
+  position: relative;
+}
+
+.hero-copy {
+  padding: 80px 10% 80px 8%;
+  max-width: 640px;
+}
+
+.hero-title {
+  color: #000;             /* main brand color */
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* CTA button */
+.hero-btn {
+  background-color: #042655;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.8rem 1.8rem;
+  border-radius: 4px;
+}
+
+.hero-btn:hover {
+  background-color: #042655;
+  color: #fff;
+}
+
+/* carousel controls placed lower and smaller */
+.hero-control {
+  width: auto;
+  top: auto;
+  bottom: 24px;
+  opacity: 0.8;
+}
+
+.hero-control .carousel-control-prev-icon,
+.hero-control .carousel-control-next-icon {
+  filter: invert(15%) sepia(51%) saturate(1743%) hue-rotate(198deg)
+          brightness(92%) contrast(102%); /* tint to #042655 */
+}
+
+/* right-side image */
+.hero-image-wrap {
+  height: 100%;
+  min-height: 420px;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* keeps image fixed & filled */
+}
+
+/* responsive tweaks */
+@media (max-width: 991.98px) {
+  .hero-copy {
+    padding: 60px 1.5rem;
+  }
+  .hero-title {
+    font-size: 2.1rem;
+  }
+  .hero-image-wrap {
+    min-height: 260px;
+  }
+}
+
+
+
+
+.plan-section {
+  background-color: #ffffff;
+}
+
+.plan-heading {
+  font-weight: 800;
+  font-size: 2rem;
+  color: #02183a;           /* heading colour like screenshot */
+}
+
+/* base box style */
+.plan-box {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 2px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* colour variants */
+.plan-orange {
+  background-color: #ffb327;
+  color: #ffffff;
+}
+
+.plan-blue {
+  background-color: #042655;
+  color: #ffffff;
+}
+
+.plan-outline {
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  color: #000000;
+}
+
+.plan-light {
+  background-color: #f5f5f5;
+  color: #000000;
+}
+
+/* hover effect */
+.plan-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+.plan-box {
+  height: 130px;
+  display: flex;
+  flex-direction: column;        /* stack icon over text */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 2px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  gap: 8px;                      /* space between icon & text */
+}
+
+/* icon styling */
+.plan-icon {
+  font-size: 1.8rem;
+}
+
+/* color adjustments so icons stay visible */
+.plan-orange,
+.plan-blue {
+  color: #ffffff;
+}
+
+.plan-outline,
+.plan-light {
+  color: #000000;
+}
+
+/* make icon inherit text color */
+.plan-box .plan-icon {
+  color: inherit;
+}
+
+/* responsive */
+@media (max-width: 767.98px) {
+  .plan-box {
+    height: 115px;
+    font-size: 0.9rem;
+  }
+  .plan-icon {
+    font-size: 1.5rem;
+  }
+}
+
+/* responsive tweaks */
+@media (max-width: 767.98px) {
+  .plan-box {
+    height: 110px;
+    font-size: 0.95rem;
+  }
+
+  .plan-heading {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+/* Section base */
+.about-section {
+  background: #ffffff;
+}
+
+/* Image styling */
+.about-img-wrap {
+  height: 100%;
+  min-height: 420px;
+}
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right content styling */
+.about-content {
+  max-width: 650px;
+}
+
+.about-tag {
+  color: #ffb327;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.about-title {
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: #000;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.about-btn {
+  background-color: #042655;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 5px;
+  font-weight: 600;
+  border: none;
+}
+
+.about-btn:hover {
+  background-color: #ffb400;
+  color: #042655;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+
+  .about-img-wrap {
+    min-height: 260px;
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .about-content {
+    padding: 2rem 1.5rem;
+  }
+}
+
+
+
+/* section base */
+.cta-strip {
+  position: relative;
+  background-image: url("assets/img/cta-bg.jpg"); /* your meeting image */
+  background-size: cover;
+  background-position: center;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+}
+
+/* soft white overlay */
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6);
+  z-index: 1;
+}
+
+/* content above overlay */
+.cta-strip .container,
+.cta-strip .row,
+.cta-strip .col-12 {
+  position: relative;
+  z-index: 2;
+}
+
+/* text */
+.cta-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000000;
+}
+
+/* button */
+.cta-btn {
+  background-color: #042655;
+  color: #ffffff;
+  padding: 0.8rem 2.6rem;
+  border-radius: 999px;          /* pill shape */
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.cta-btn:hover {
+  background-color: #02183a;
+  color: #ffffff;
+}
+
+/* responsive */
+@media (max-width: 767.98px) {
+  .cta-strip {
+    text-align: center;
+    min-height: 180px;
+  }
+  .cta-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .cta-btn {
+    width: auto;
+    padding-inline: 2rem;
+  }
+}
+
+
+
+
+/* section base */
+.what-section {
+  background-color: #ffffff;
+}
+
+/* left content */
+.what-content {
+  max-width: 720px;
+}
+
+.what-tag {
+  color: #ffb327;          /* small yellow label */
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.what-title {
+  font-weight: 800;
+  font-size: 2.3rem;
+  line-height: 1.25;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.what-intro {
+  font-size: 1rem;
+  color: #222;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* bullet list with triangle marker */
+.what-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.what-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.7rem;
+  line-height: 1.7;
+}
+
+.what-list li::before {
+  content: "➤";
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  font-size: 0.9rem;
+  color: #042655;
+}
+
+/* right image */
+.what-img-wrap {
+  height: 100%;
+  min-height: 420px;
+}
+
+.what-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* responsive */
+@media (max-width: 991.98px) {
+  .what-content {
+    padding: 2.5rem 1.5rem;
+  }
+  .what-title {
+    font-size: 1.9rem;
+  }
+  .what-img-wrap {
+    min-height: 260px;
+  }
+}
+
+
+
+
+
+
+
+
+.blog-heading {
+  font-weight: 800;
+  color: #042655;
+}
+
+.blog-subtitle {
+  color: #666;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* Card base */
+.blog-card {
+  background-color: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-img-wrap img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.blog-body {
+  padding: 1.3rem 1.4rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blog-meta {
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 0.4rem;
+}
+
+.blog-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #042655;
+  margin-bottom: 0.6rem;
+}
+
+.blog-text {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.blog-btn {
+  display: inline-block;
+  background-color: #042655;        /* dark blue */
+  color: #ffffff;
+  padding: 0.55rem 1.3rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.blog-btn:hover {
+  background-color: #02183a;        /* darker blue on hover */
+  color: #ffffff;
+}
+
+
+.blog-link:hover {
+  text-decoration: underline;
+}
+
+/* Hover effect */
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+/* controls styling: small, tinted to blue */
+.blog-control {
+  width: auto;
+}
+
+.blog-control .carousel-control-prev-icon,
+.blog-control .carousel-control-next-icon {
+  filter: invert(18%) sepia(34%) saturate(1400%) hue-rotate(197deg)
+          brightness(90%) contrast(95%);  /* tint near #042655 */
+}
+
+/* ----- Responsive tweaks ----- */
+@media (max-width: 991.98px) {
+  .blog-img-wrap img {
+    height: 190px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* 1 card per row on small screens */
+  #blogCarousel .carousel-item .row > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+.blog-img-wrap img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+/* make carousel container positioned so nav can sit on top-right */
+.blog-carousel {
+  position: relative;
+}
+
+/* nav wrapper */
+.blog-carousel .owl-nav {
+  position: absolute;
+  top: -50px;              /* move above the cards */
+  right: 0;
+  display: flex;
+  gap: 10px;
+}
+
+/* remove default button styling */
+.blog-carousel .owl-nav button {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* our custom circular buttons */
+.blog-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #042655;      /* brand blue */
+  font-size: 18px;
+  line-height: 1;
+  color: #042655;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* hover */
+.blog-nav-btn:hover {
+  background-color: #042655;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* remove focus outline */
+.blog-carousel .owl-nav button:focus {
+  outline: none;
+}
+
+/* responsive: bring buttons a bit closer on mobile */
+@media (max-width: 767.98px) {
+  .blog-carousel .owl-nav {
+    top: -40px;
+  }
+}
+
+
+
+/* whole section with background image */
+.support-section {
+  position: relative;
+  background-image: url("images/bg.jpg"); /* your tech image */
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+/* dark overlay for readability */
+.support-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+/* content sits above overlay */
+.support-section .container,
+.support-section .row,
+.support-section .col-12 {
+  position: relative;
+  z-index: 2;
+}
+
+/* left list */
+.support-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.support-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+}
+
+.support-list i {
+  color: #ffb327;          /* green check */
+  margin-right: 0.6rem;
+  font-size: 1.1rem;
+}
+
+/* right side */
+.support-label {
+  color: #b5fff8;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.support-phone {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #ffb327;
+}
+
+.support-text {
+  font-size: 0.98rem;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CTA button */
+.support-btn {
+  background: linear-gradient(90deg, #ffb400, #ddac51);
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.8rem 2.2rem;
+  border-radius: 4px;
+}
+
+.support-btn:hover {
+  background: linear-gradient(90deg, #ffb400, #ddac51);
+  color: #ffffff;
+}
+
+
+
+.support-form .form-control {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.support-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.support-form .form-control:focus {
+  background-color: rgba(0, 0, 0, 0.65);
+  border-color: #042655;
+  box-shadow: 0 0 0 0.15rem rgba(46, 0, 212, 0.25);
+  color: #ffffff;
+}
+
+/* keep existing support-btn styles you already have */
+
+/* responsive tweaks */
+@media (max-width: 991.98px) {
+  .support-phone {
+    font-size: 2rem;
+  }
+  .support-section .row {
+    text-align: center;
+  }
+  .support-text {
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+.site-footer {
+  background-color: #031736;
+  color: #e2e6f0;
+  font-size: 0.95rem;
+}
+
+.footer-logo {
+  max-height: 46px;
+  width: auto;
+}
+
+.footer-text {
+  margin-bottom: 1rem;
+  max-width: 340px;
+}
+
+/* titles */
+.footer-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+/* links lists */
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.4rem;
+}
+
+.footer-links a {
+  color: #c7cee7;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #ffb327;      /* yellow accent */
+}
+
+/* contact */
+.footer-contact {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-contact i {
+  color: #ffb327;
+  margin-top: 0.15rem;
+}
+
+.footer-contact a {
+  color: #c7cee7;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #ffffff;
+}
+
+/* social icons */
+.footer-social a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.footer-social a:hover {
+  background-color: #ffb327;
+  border-color: #ffb327;
+  color: #031736;
+}
+
+/* bottom bar */
+.footer-bottom {
+  background-color: #021024;
+  padding: 0.8rem 0;
+  font-size: 0.85rem;
+  color: #9ca6c0;
+}
+
+.footer-bottom-link {
+  color: #c7cee7;
+  text-decoration: none;
+}
+
+.footer-bottom-link:hover {
+  color: #ffb327;
+}
+
+/* responsive */
+@media (max-width: 767.98px) {
+  .footer-title {
+    margin-top: 1rem;
+  }
+  .footer-bottom {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   GLOBAL TRANSITIONS
+   ========================= */
+a,
+button,
+.main-navbar .nav-link,
+.hero-btn,
+.about-btn,
+.plan-box,
+.blog-card,
+.support-btn,
+.cta-btn {
+  transition: all 0.25s ease;
+}
+
+/* =========================
+   NAVBAR EFFECTS
+   ========================= */
+/* underline / indicator on hover & active */
+.main-navbar .nav-link {
+  position: relative;
+}
+
+.main-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: -6px;
+  height: 2px;
+  background-color: #042655;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+.main-navbar .nav-link:hover::after,
+.main-navbar .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* small navbar shadow when scrolling (optional if you add .scrolled via JS)
+.main-navbar.scrolled {
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+*/
+
+/* =========================
+   HERO BUTTON / SLIDE EFFECT
+   ========================= */
+.hero-btn {
+  box-shadow: 0 14px 26px rgba(4, 38, 85, 0.25);
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 30px rgba(4, 38, 85, 0.3);
+}
+
+/* optional: slight fade/slide for carousel text */
+.hero-text-slider .carousel-item {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.hero-text-slider .carousel-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   PLAN BOX EFFECTS
+   ========================= */
+.plan-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left,
+             rgba(255,255,255,0.18),
+             transparent 55%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.plan-box:hover::before {
+  opacity: 1;
+}
+
+.plan-box:hover .plan-icon {
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* =========================
+   ABOUT BUTTON EFFECT
+   ========================= */
+.about-btn {
+  box-shadow: 0 12px 22px rgba(4, 38, 85, 0.25);
+}
+
+.about-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 32px rgba(4, 38, 85, 0.32);
+}
+
+/* =========================
+   WHAT SECTION BULLET HOVER
+   ========================= */
+.what-list li {
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.what-list li:hover {
+  color: #042655;
+  transform: translateX(3px);
+}
+
+/* =========================
+   BLOG CARD EFFECTS
+   ========================= */
+.blog-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-img-wrap {
+  overflow: hidden;
+}
+
+.blog-img-wrap img {
+  transition: transform 0.4s ease;
+}
+
+.blog-card:hover .blog-img-wrap img {
+  transform: scale(1.05);
+}
+
+/* small accent bar on top of blog card */
+.blog-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background: linear-gradient(90deg, #ffb327, #042655);
+  transition: width 0.3s ease;
+}
+
+.blog-card:hover::before {
+  width: 100%;
+}
+
+/* blog button hover */
+.blog-btn {
+  box-shadow: 0 10px 20px rgba(4, 38, 85, 0.2);
+}
+
+.blog-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 26px rgba(4, 38, 85, 0.3);
+}
+
+/* =========================
+   BLOG OWL NAV BUTTONS
+   ========================= */
+.blog-nav-btn {
+  /* add slight scale on hover */
+}
+
+.blog-nav-btn:hover {
+  transform: translateY(-1px) scale(1.05);
+}
+
+/* =========================
+   SUPPORT SECTION EFFECTS
+   ========================= */
+.support-list li {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.support-list li:hover {
+  transform: translateX(4px);
+}
+
+.support-btn {
+  box-shadow: 0 14px 26px rgba(0,0,0,0.35);
+}
+
+.support-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(0,0,0,0.45);
+}
+
+/* =========================
+   CTA STRIP BUTTON EFFECT
+   ========================= */
+.cta-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(
+      120deg,
+      rgba(255,255,255,0.6),
+      rgba(255,255,255,0)
+  );
+  transform: skewX(-20deg);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.cta-btn:hover::after {
+  left: 120%;
+  opacity: 1;
+}
+
+/* =========================
+   FOOTER EFFECTS
+   ========================= */
+.footer-links a,
+.footer-bottom-link {
+  position: relative;
+}
+
+.footer-links a::after,
+.footer-bottom-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0;
+  background-color: #ffb327;
+  transition: width 0.25s ease;
+}
+
+.footer-links a:hover::after,
+.footer-bottom-link:hover::after {
+  width: 100%;
+}
+
+/* social icons already have hover, add subtle lift */
+.footer-social a:hover {
+  transform: translateY(-2px);
+}

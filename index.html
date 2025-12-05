@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rab </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+</head>
+<style>
+  .support-section {
+  position: relative;
+  background-image: url("images/bg.jpg"); /* your tech image */
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}  
+
+.cta-strip {
+  position: relative;
+  background-image: url("images/bg.jpg"); /* your meeting image */
+  background-size: cover;
+  background-position: center;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+}
+.main-navbar .nav-link::after {
+  content: none;
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: -6px;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+
+/* on hover / active: show short line (e.g. 28px) */
+.main-navbar .nav-link:hover::after,
+.main-navbar .nav-link.active::after {
+  width: 28px;
+}
+ 
+/* Hide underline in mobile view */
+@media (max-width: 991.98px) {
+  .main-navbar .nav-link::after {
+    content: none;
+  }
+}
+
+
+/* Open navbar dropdown on hover for desktop only */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  /* optional: keep the toggle in "active" state while menu is open */
+  .navbar .dropdown:hover > .nav-link {
+    color: #042655;           /* your brand color */
+  }
+}
+
+</style>
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top main-navbar">
+  <div class="container">
+    <!-- Brand / Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="images/RAB LOGO.pdf" alt="Rab" class="nav-logo">
+      <!-- if logo already has text, you can remove this span -->
+      <!-- <span class="ms-2 fw-semibold">NEXXA CORPORATES</span> -->
+    </a>
+
+    <!-- Toggler for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+
+        <!-- Services dropdown -->
+        <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown"
+     role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Services
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="servicesDropdown">
+    <li><a class="dropdown-item" href="#">Printing</a></li>
+    <li><a class="dropdown-item" href="#">Packing</a></li>
+    <li><a class="dropdown-item" href="#">Designing</a></li>
+    <li><a class="dropdown-item" href="#">Advertising</a></li>
+    <li><a class="dropdown-item" href="#">Social Media</a></li>
+    <li><a class="dropdown-item" href="#">Digital Marketing</a></li>
+    <li><a class="dropdown-item" href="#">Branding</a></li>
+    <li><a class="dropdown-item" href="#">Event</a></li>
+  </ul>
+</li>
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">General Trading & IT</a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- HERO SLIDER SECTION -->
+<section class="hero-split">
+  <div class="container-fluid px-0">
+    <div class="row g-0 align-items-stretch">
+      
+      <!-- LEFT: TEXT SLIDER -->
+      <div class="col-12 col-lg-6 d-flex">
+        <div id="heroTextSlider"
+             class="carousel slide hero-text-slider w-100"
+             data-bs-ride="carousel"
+             data-bs-interval="6000">
+          
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="hero-copy">
+                <h1 class="hero-title">
+                  Top Digital Marketing Agency<br>
+                  In Kerala To Accelerate Growth
+                </h1>
+                <p class="hero-text">
+                  We are committed to amplify business growth, intensify marketing
+                  verticals, and strengthen your business using digital marketing
+                  services skills.
+                </p>
+                <a href="#" class="btn hero-btn">View Our Services</a>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="hero-copy">
+                <h1 class="hero-title">
+                  Data-Driven Marketing<br>
+                  Strategies That Deliver
+                </h1>
+                <p class="hero-text">
+                  From lead generation to conversion, we design full-funnel
+                  strategies tailored to your brand and audience.
+                </p>
+                <a href="#" class="btn hero-btn">Explore Our Solutions</a>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="hero-copy">
+                <h1 class="hero-title">
+                  Scale Your Brand<br>
+                  With Nexxa Corporates
+                </h1>
+                <p class="hero-text">
+                  Unlock growth with SEO, performance marketing, content and
+                  automation backed by proven frameworks.
+                </p>
+                <a href="#" class="btn hero-btn">Talk To Our Experts</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- controls -->
+          
+        </div>
+      </div>
+
+      <!-- RIGHT: FIXED IMAGE -->
+      <div class="col-12 col-lg-6">
+        <div class="hero-image-wrap">
+          <!-- replace src with your image -->
+          <img src="images/images.jpg" alt="Digital marketing professional" class="img-fluid hero-img">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="plan-section py-5">
+  <div class="container">
+
+    <!-- Heading -->
+    <h2 class="plan-heading text-center mb-5">
+      Choose your services plan according to your Business!
+    </h2>
+
+    <!-- Grid -->
+    <div class="row g-4 justify-content-center">
+
+  <!-- 1 -->
+  <div class="col-6 col-md-3">
+    <div class="plan-box plan-orange">
+      <i class="fa-solid fa-print plan-icon"></i>
+      <span>Printing</span>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="col-6 col-md-3">
+    <div class="plan-box plan-outline">
+      <i class="fa-solid fa-box-open plan-icon"></i>
+      <span>Packing</span>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="col-6 col-md-3">
+    <div class="plan-box plan-light">
+      <i class="fa-solid fa-bullhorn plan-icon"></i>
+      <span>Branding</span>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="col-6 col-md-3">
+    <div class="plan-box plan-blue">
+      <i class="fa-solid fa-pen-ruler plan-icon"></i>
+      <span>Designing</span>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="col-6 col-md-3">
+    <div class="plan-box plan-outline">
+      <i class="fa-solid fa-rectangle-ad plan-icon"></i>
+      <span>Advertising</span>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="col-6 col-md-3">
+    <div class="plan-box plan-light">
+      <i class="fa-solid fa-chart-line plan-icon"></i>
+      <span>Digital Marketing</span>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="col-6 col-md-3">
+    <div class="plan-box plan-blue">
+      <i class="fa-brands fa-instagram plan-icon"></i>
+      <span>Social Media</span>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="col-6 col-md-3">
+    <div class="plan-box plan-orange">
+      <i class="fa-solid fa-calendar-check plan-icon"></i>
+      <span>Event Management</span>
+    </div>
+  </div>
+
+</div>
+
+  </div>
+</section>
+
+
+<section class="about-section">
+  <div class="container-fluid">
+    <div class="row g-0 align-items-center">
+
+      <!-- LEFT IMAGE -->
+      <div class="col-12 col-lg-6 order-2 order-lg-1">
+        <div class="about-img-wrap">
+          <img src="images/digital.jpg" alt="About Us" class="img-fluid about-img">
+        </div>
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="col-12 col-lg-6">
+        <div class="about-content px-4 px-lg-5 py-5">
+          
+          <p class="about-tag">ABOUT US</p>
+
+          <h2 class="about-title">
+            We Are A Result Driven ROI Focused Digital Marketing Agency 
+            Focused On Obtain Best Outcome.
+          </h2>
+
+          <p class="about-text">
+            A group digital marketing professionals, creating engaging stories 
+            around brands, build business out of scratch with clear marketing 
+            strategies, and collect leads and convert prospects into customers.
+          </p>
+
+          <a href="#" class="btn about-btn">Read More</a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="cta-strip">
+  <div class="cta-overlay"></div>
+
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 col-lg-7 text-center text-lg-start">
+        <h2 class="cta-title mb-0">
+          Have any project in mind? Let's talk!
+        </h2>
+      </div>
+
+      <div class="col-12 col-lg-5 text-center text-lg-end mt-3 mt-lg-0">
+        <a href="#contact" class="btn cta-btn">
+          Make An Appointment
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="what-section">
+  <div class="container-fluid px-0">
+    <div class="row g-0 align-items-center">
+
+      <!-- LEFT: TEXT (first on mobile) -->
+      <div class="col-12 col-lg-6 order-1 order-lg-1">
+        <div class="what-content px-4 px-lg-5 py-5">
+
+          <p class="what-tag">WHAT WE DO</p>
+
+          <h2 class="what-title">
+            When Your Objective Is To Scale Your Sales, By Hiring A
+            Leading Top Digital Marketing Agency In Kerala
+          </h2>
+
+          <p class="what-intro">
+            Digital marketing has helped to attain 1600% ROI using a unique strategy of
+            growth. Have a look at how we have helped our clients to reach their goal.
+          </p>
+
+          <ul class="what-list">
+            <li>Our methodology section speaks about how we have helped clients to reach their goal.</li>
+            <li>Read our review section to know what are the features our clients liked and the aspects they dislike.</li>
+            <li>Learn how do we offer solutions, the way we consider a project.</li>
+            <li>Still confused, secure a free digital marketing audit to get a clear picture about how marketing is dealt with.</li>
+          </ul>
+
+        </div>
+      </div>
+
+      <!-- RIGHT: IMAGE -->
+      <div class="col-12 col-lg-6 order-2 order-lg-2">
+        <div class="what-img-wrap">
+          <!-- replace with your image -->
+          <img src="assets/img/what-we-do-team.jpg"
+               alt="Digital marketing team" class="img-fluid what-img">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="blog-section py-5">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-4">
+      <h2 class="blog-heading">Latest Blogs & Insights</h2>
+      <p class="blog-subtitle">
+        Stay updated with our latest articles on digital marketing, branding and growth.
+      </p>
+    </div>
+
+
+    <!-- Owl Slider -->
+    <div class="owl-carousel blog-carousel">
+
+      <!-- Card 1 -->
+      <article class="blog-card">
+        <div class="blog-img-wrap">
+          <img src="assets/img/blog1.jpg" alt="Blog 1">
+        </div>
+        <div class="blog-body">
+          <p class="blog-meta">SEO · March 2025</p>
+          <h5 class="blog-title">7 SEO Strategies To Boost Your Organic Traffic</h5>
+          <p class="blog-text">
+            Discover powerful on-page and off-page tactics that help your website
+            rank higher and bring in quality visitors.
+          </p>
+        <a href="#" class="blog-btn">Read More</a>
+
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="blog-card">
+        <div class="blog-img-wrap">
+          <img src="assets/img/blog2.jpg" alt="Blog 2">
+        </div>
+        <div class="blog-body">
+          <p class="blog-meta">Performance Ads · March 2025</p>
+          <h5 class="blog-title">How To Scale Facebook Ads Without Losing ROAS</h5>
+          <p class="blog-text">
+            Learn our framework to increase ad spend while keeping acquisition
+            costs under control.
+          </p>
+          <a href="#" class="blog-btn">Read More</a>
+
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="blog-card">
+        <div class="blog-img-wrap">
+          <img src="assets/img/blog3.jpg" alt="Blog 3">
+        </div>
+        <div class="blog-body">
+          <p class="blog-meta">Content · February 2025</p>
+          <h5 class="blog-title">Content Funnels: Turning Visitors Into Loyal Customers</h5>
+          <p class="blog-text">
+            Map your customer journey using content that nurtures, educates and converts.
+          </p>
+          <a href="#" class="blog-btn">Read More</a>
+
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="blog-card">
+        <div class="blog-img-wrap">
+          <img src="assets/img/blog4.jpg" alt="Blog 4">
+        </div>
+        <div class="blog-body">
+          <p class="blog-meta">Analytics · February 2025</p>
+          <h5 class="blog-title">Reading Your Data: KPIs That Actually Matter</h5>
+          <p class="blog-text">
+            Avoid vanity metrics and focus on the numbers that drive real growth.
+          </p>
+          <a href="#" class="blog-btn">Read More</a>
+
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="blog-card">
+        <div class="blog-img-wrap">
+          <img src="assets/img/blog5.jpg" alt="Blog 5">
+        </div>
+        <div class="blog-body">
+          <p class="blog-meta">Branding · January 2025</p>
+          <h5 class="blog-title">Building a Memorable Brand in a Crowded Market</h5>
+          <p class="blog-text">
+            Position your brand to stand out and stay top-of-mind for your audience.
+          </p>
+          <a href="#" class="blog-btn">Read More</a>
+
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="blog-card">
+        <div class="blog-img-wrap">
+          <img src="assets/img/blog6.jpg" alt="Blog 6">
+        </div>
+        <div class="blog-body">
+          <p class="blog-meta">Automation · January 2025</p>
+          <h5 class="blog-title">Marketing Automation Workflows That Save Hours</h5>
+          <p class="blog-text">
+            Automate repetitive tasks while delivering a personalised experience.
+          </p>
+         <a href="#" class="blog-btn">Read More</a>
+
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="support-section">
+  <div class="support-overlay"></div>
+  <div class="container h-100">
+    <div class="row align-items-center g-4 py-5">
+
+      <!-- LEFT: checklist -->
+      <div class="col-12 col-lg-6">
+        <ul class="support-list">
+          <li><i class="fa-solid fa-check"></i> Fast &amp; Reliable Support</li>
+          <li><i class="fa-solid fa-check"></i> Corporate Consulting Services</li>
+          <li><i class="fa-solid fa-check"></i> Best Technical Team</li>
+          <li><i class="fa-solid fa-check"></i> Professionals from ICAI, ICMA, ICSI</li>
+          <li><i class="fa-solid fa-check"></i> Comprehensive BPO Services</li>
+          <li><i class="fa-solid fa-check"></i> Robust Branding Solutions</li>
+          <li><i class="fa-solid fa-check"></i> Sharp Digital Marketing Consultation</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT: call box -->
+      <div class="col-12 col-lg-6">
+  <div class="support-call text-lg-start text-center">
+    <p class="support-label mb-1">CONTACT US</p>
+    <h2 class="support-phone mb-3">Let’s Talk About Your Project</h2>
+
+    <form class="support-form" action="#" method="post">
+      <!-- if you’re in Django/Laravel etc, add your CSRF tag here -->
+
+      <div class="row g-3">
+        <div class="col-12 col-md-6">
+          <input type="text" class="form-control" name="name"
+                 placeholder="Your Name" required>
+        </div>
+        <div class="col-12 col-md-6">
+          <input type="email" class="form-control" name="email"
+                 placeholder="Email Address" required>
+        </div>
+        <div class="col-12">
+          <input type="tel" class="form-control" name="phone"
+                 placeholder="Phone Number" required>
+        </div>
+        <div class="col-12">
+          <textarea class="form-control" name="message" rows="3"
+                    placeholder="Tell us about your project" required></textarea>
+        </div>
+        <div class="col-12 text-center text-lg-start">
+          <button type="submit" class="btn support-btn">
+            Send Message
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="container py-5">
+    <div class="row gy-4">
+
+      <!-- 1) Logo + short text -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="footer-brand">
+          <!-- replace with your logo -->
+          <img src="assets/img/logo-white.png" alt="Company Logo" class="footer-logo mb-3">
+          <p class="footer-text">
+            We are a result-driven digital marketing and branding agency focused on helping
+            businesses scale with data-backed strategies and creative solutions.
+          </p>
+          <div class="footer-social d-flex gap-2">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2) Quick Links -->
+      <div class="col-6 col-md-3 col-lg-2">
+        <h5 class="footer-title">Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- 3) Services -->
+      <div class="col-6 col-md-3 col-lg-3">
+        <h5 class="footer-title">Services</h5>
+        <ul class="footer-links">
+          <li><a href="#">Digital Marketing</a></li>
+          <li><a href="#">Branding &amp; Design</a></li>
+          <li><a href="#">Social Media Management</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Consulting</a></li>
+        </ul>
+      </div>
+
+      <!-- 4) Contact -->
+      <div class="col-12 col-lg-3">
+        <h5 class="footer-title">Contact</h5>
+        <ul class="footer-contact">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>2nd Floor, Your Business Center, Kochi, Kerala, India</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+916238300379">+91 62 38 300 379</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@yourcompany.com">info@yourcompany.com</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer-bottom">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p class="mb-0">© <span id="yearSpan"></span> Your Company Name. All Rights Reserved.</p>
+      <p class="mb-0 small">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a> |
+        <a href="#" class="footer-bottom-link">Terms &amp; Conditions</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $(".blog-carousel").owlCarousel({
+      loop: true,
+      margin: 24,
+      nav: true,
+      dots: false,
+      navText: [
+        '<span class="blog-nav-btn blog-nav-prev">&lt;</span>',
+        '<span class="blog-nav-btn blog-nav-next">&gt;</span>'
+      ],
+      responsive: {
+        0:   { items: 1 },
+        768: { items: 2 },
+        992: { items: 3 }
+      }
+    });
+  });
+</script>
+
+    
+</body>
+</html>
