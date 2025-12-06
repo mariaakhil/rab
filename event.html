@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rab Services Designing</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/blog.css">
+     
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+</head>
+<style>
+    .page-hero {
+  position: relative;
+  background-image: url("images/bg1.jpg"); /* your image path */
+  background-size: cover;
+  background-position: center;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  margin-top: 0;
+}
+
+
+
+
+
+
+
+
+/* hero bg for event page */
+.event-hero {
+  background-image: url("images/event-hero.jpg"); /* change to your banner */
+}
+
+/* intro small list */
+.event-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.event-list li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.event-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: -0.05rem;
+  color: #ffb327;
+  font-size: 1.3rem;
+}
+
+/* headings */
+.event-heading {
+  font-weight: 800;
+  color: #042655;
+}
+
+.event-subtext {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 0.96rem;
+}
+
+/* TYPES cards */
+.event-types-section {
+  background-color: #f8f9ff;
+}
+
+.event-type-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.8rem 1.4rem;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.05);
+  border: 1px solid #e0e3f2;
+  text-align: left;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: 0.25s ease;
+}
+
+.event-type-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #042655, #ffb327);
+  transition: width 0.25s ease;
+}
+
+.event-type-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #042655;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  transition: 0.25s ease;
+}
+
+.event-type-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #042655;
+  margin-bottom: 0.4rem;
+}
+
+.event-type-text {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0;
+}
+
+/* hover */
+.event-type-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.14);
+  border-color: #042655;
+}
+
+.event-type-card:hover::before {
+  width: 100%;
+}
+
+.event-type-card:hover .event-type-icon {
+  background: #ffb327;
+  color: #000;
+}
+
+/* what we handle section */
+.event-services-img-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.event-services-img {
+  width: 100%;
+  height: auto;
+  transition: 0.4s ease;
+}
+
+.event-services-img:hover {
+  transform: scale(1.05);
+}
+
+.event-services-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.event-services-list li {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.event-services-list i {
+  color: #ffb327;
+  margin-right: 0.5rem;
+}
+
+/* process */
+.event-process-section {
+  background-color: #ffffff;
+}
+
+.event-process-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.8rem 1.4rem;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.05);
+  border: 1px solid #e1e4f1;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: 0.25s ease;
+  text-align: left;
+}
+
+.event-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #042655;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.event-process-box h5 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #042655;
+  margin-bottom: 0.4rem;
+}
+
+.event-process-box p {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0;
+}
+
+/* bottom gradient bar */
+.event-process-box::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #042655, #ffb327);
+  transition: width 0.25s ease;
+}
+
+.event-process-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+  border-color: #042655;
+}
+
+.event-process-box:hover::after {
+  width: 100%;
+}
+
+/* responsive tweaks */
+@media (max-width: 991.98px) {
+  .service-title-large {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .service-title-large {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+
+
+/* ===== CTA STRIP ===== */
+.cta-strip {
+  position: relative;
+  background-image: url("images/bg.jpg"); /* change path */
+  background-size: cover;
+  background-position: center;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* soft overlay */
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.65);   /* light wash over image */
+  z-index: 1;
+}
+
+/* keep content above overlay */
+.cta-strip .container,
+.cta-strip .row,
+.cta-strip .col-12,
+.cta-strip .col-lg-7,
+.cta-strip .col-lg-5 {
+  position: relative;
+  z-index: 2;
+}
+
+/* heading */
+.cta-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000;
+}
+
+/* button */
+.cta-btn {
+  background-color: #042655;
+  color: #ffffff;
+  padding: 0.8rem 2.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+/* hover state */
+.cta-btn:hover {
+  background-color: #ffb327;
+  color: #000;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+/* ===== responsive ===== */
+@media (max-width: 991.98px) {
+  .cta-strip {
+    min-height: 180px;
+    text-align: center;
+  }
+  .cta-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .cta-title {
+    font-size: 1.4rem;
+  }
+  .cta-btn {
+    padding-inline: 2rem;
+  }
+}
+
+</style>
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top main-navbar">
+  <div class="container">
+    <!-- Brand / Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="images/RAB LOGO.pdf" alt="Rab" class="nav-logo">
+      <!-- if logo already has text, you can remove this span -->
+      <!-- <span class="ms-2 fw-semibold">NEXXA CORPORATES</span> -->
+    </a>
+
+    <!-- Toggler for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+
+        <!-- Services dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown"
+             role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="servicesDropdown">
+            <li><a class="dropdown-item" href="#">Printing</a></li>
+            <li><a class="dropdown-item" href="#">Packing</a></li>
+            <li><a class="dropdown-item" href="#">Designing</a></li>
+            <li><a class="dropdown-item" href="#">Advertising</a></li>
+            <li><a class="dropdown-item" href="#">Social Media</a></li>
+            <li><a class="dropdown-item" href="#">Digital Marketing</a></li>
+            <li><a class="dropdown-item" href="#">Branding</a></li>
+            <li><a class="dropdown-item" href="#">Event</a></li>
+           
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">General Trading & IT</a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Blog</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+<!-- HERO -->
+<section class="page-hero event-hero">
+  <div class="page-hero-overlay"></div>
+  <div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+      <div class="col-12 text-center">
+        <h1 class="page-hero-title">Event Management</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb page-hero-breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="services.html">Services</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Event Management</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO: TEXT LEFT / IMAGE RIGHT -->
+<section class="event-intro-section py-5">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+
+      <!-- TEXT -->
+      <div class="col-12 col-lg-6">
+        <h5 class="service-tag">From Concept To Curtain Call</h5>
+        <h2 class="service-title-large">
+          End-to-End Event Management For Memorable Experiences
+        </h2>
+        <p class="service-text">
+          We plan, design and execute events that are aligned with your brand and business goals – 
+          whether it's a product launch, corporate meet, expo or public show.
+        </p>
+        <p class="service-text">
+          Our team handles everything from venue, production and branding to invites, promotions
+          and on-ground coordination, so you can focus on your guests.
+        </p>
+        <ul class="event-list">
+          <li>Corporate events, conferences &amp; seminars</li>
+          <li>Brand activations, roadshows &amp; launches</li>
+          <li>Exhibitions, stall design &amp; trade shows</li>
+        </ul>
+      </div>
+
+      <!-- IMAGE -->
+      <div class="col-12 col-lg-6">
+        <div class="service-img-wrap">
+          <img src="images/event-main.jpg" alt="Event management" class="service-img">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TYPES OF EVENTS -->
+<section class="event-types-section py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h3 class="event-heading">Types of Events We Manage</h3>
+      <p class="event-subtext">
+        We manage a variety of event formats, tailored to your audience, location and budget.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Corporate -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="event-type-card">
+          <div class="event-type-icon">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <h5 class="event-type-title">Corporate Events</h5>
+          <p class="event-type-text">
+            Conferences, annual meets, dealer meets, training programs and internal events.
+          </p>
+        </div>
+      </div>
+
+      <!-- Brand Activation -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="event-type-card">
+          <div class="event-type-icon">
+            <i class="fa-solid fa-bullhorn"></i>
+          </div>
+          <h5 class="event-type-title">Brand Activations</h5>
+          <p class="event-type-text">
+            Roadshows, mall activations, store launches and experience zones.
+          </p>
+        </div>
+      </div>
+
+      <!-- Exhibitions -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="event-type-card">
+          <div class="event-type-icon">
+            <i class="fa-solid fa-store"></i>
+          </div>
+          <h5 class="event-type-title">Exhibitions &amp; Stalls</h5>
+          <p class="event-type-text">
+            Stall design, fabrication, branding and visitor engagement for expos.
+          </p>
+        </div>
+      </div>
+
+      <!-- Public / Special -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="event-type-card">
+          <div class="event-type-icon">
+            <i class="fa-solid fa-music"></i>
+          </div>
+          <h5 class="event-type-title">Public &amp; Special Events</h5>
+          <p class="event-type-text">
+            Stage shows, award nights, cultural events and celebrations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE HANDLE (IMAGE LEFT + POINTS RIGHT) -->
+<section class="event-services-section py-5">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      
+      <!-- IMAGE LEFT -->
+      <div class="col-12 col-lg-5 order-1 order-lg-1">
+        <div class="event-services-img-wrap">
+          <img src="images/event-services.jpg" alt="Event services" class="event-services-img">
+        </div>
+      </div>
+
+      <!-- TEXT RIGHT -->
+      <div class="col-12 col-lg-7 order-2 order-lg-2">
+        <h3 class="event-heading mb-3">What We Handle For Your Events</h3>
+        <p class="service-text">
+          You don’t have to juggle multiple vendors. We coordinate and manage every key aspect of your event.
+        </p>
+
+        <div class="row g-3 mt-2">
+          <div class="col-6">
+            <ul class="event-services-list">
+              <li><i class="fa-solid fa-check"></i> Concept &amp; theme</li>
+              <li><i class="fa-solid fa-check"></i> Venue selection</li>
+              <li><i class="fa-solid fa-check"></i> Stage &amp; set design</li>
+              <li><i class="fa-solid fa-check"></i> Sound &amp; lighting</li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul class="event-services-list">
+              <li><i class="fa-solid fa-check"></i> Event branding &amp; creatives</li>
+              <li><i class="fa-solid fa-check"></i> Invitations &amp; RSVPs</li>
+              <li><i class="fa-solid fa-check"></i> On-ground crew &amp; coordination</li>
+              <li><i class="fa-solid fa-check"></i> Photo / video coverage</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EVENT PROCESS -->
+<section class="event-process-section py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h3 class="event-heading">Our Event Management Process</h3>
+      <p class="event-subtext">
+        A clear step-by-step approach to deliver smooth, stress-free events.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- 1 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="event-process-box">
+          <span class="event-step-num">01</span>
+          <h5>Brief &amp; Planning</h5>
+          <p>We understand your goals, audience, budget and timelines.</p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="event-process-box">
+          <span class="event-step-num">02</span>
+          <h5>Concept &amp; Proposal</h5>
+          <p>We share concepts, run-throughs and detailed costings.</p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="event-process-box">
+          <span class="event-step-num">03</span>
+          <h5>Execution &amp; Production</h5>
+          <p>Vendors, branding, technical setup and rehearsals are managed.</p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="event-process-box">
+          <span class="event-step-num">04</span>
+          <h5>Show Day &amp; Support</h5>
+          <p>On-ground coordination, live support and post-event reporting.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-strip">
+  <div class="cta-overlay"></div>
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 col-lg-7 text-center text-lg-start">
+        <h2 class="cta-title mb-0">
+          Planning an upcoming event? Let us make it unforgettable.
+        </h2>
+      </div>
+      <div class="col-12 col-lg-5 text-center text-lg-end mt-3 mt-lg-0">
+        <a href="#contact" class="btn cta-btn">
+          Talk To Our Event Team
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+  <div class="container py-5">
+    <div class="row gy-4">
+
+      <!-- 1) Logo + short text -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="footer-brand">
+          <!-- replace with your logo -->
+          <img src="assets/img/logo-white.png" alt="Company Logo" class="footer-logo mb-3">
+          <p class="footer-text">
+            We are a result-driven digital marketing and branding agency focused on helping
+            businesses scale with data-backed strategies and creative solutions.
+          </p>
+          <div class="footer-social d-flex gap-2">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2) Quick Links -->
+      <div class="col-6 col-md-3 col-lg-2">
+        <h5 class="footer-title">Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- 3) Services -->
+      <div class="col-6 col-md-3 col-lg-3">
+        <h5 class="footer-title">Services</h5>
+        <ul class="footer-links">
+          <li><a href="#">Digital Marketing</a></li>
+          <li><a href="#">Branding &amp; Design</a></li>
+          <li><a href="#">Social Media Management</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Consulting</a></li>
+        </ul>
+      </div>
+
+      <!-- 4) Contact -->
+      <div class="col-12 col-lg-3">
+        <h5 class="footer-title">Contact</h5>
+        <ul class="footer-contact">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>2nd Floor, Your Business Center, Kochi, Kerala, India</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+916238300379">+91 62 38 300 379</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@yourcompany.com">info@yourcompany.com</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer-bottom">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p class="mb-0">© <span id="yearSpan"></span> Your Company Name. All Rights Reserved.</p>
+      <p class="mb-0 small">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a> |
+        <a href="#" class="footer-bottom-link">Terms &amp; Conditions</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    
+</body>
+</html>

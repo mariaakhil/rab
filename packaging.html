@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rab Services Packaging</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/blog.css">
+     
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+</head>
+<style>
+    .page-hero {
+  position: relative;
+  background-image: url("images/bg1.jpg"); /* your image path */
+  background-size: cover;
+  background-position: center;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  margin-top: 0;
+}
+
+/* service detail wrapper */
+.service-detail-section {
+  background-color: #ffffff;
+}
+
+/* image box */
+.sd-img-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+.sd-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+/* subtle zoom on hover */
+.sd-img-wrap:hover img {
+  transform: scale(1.05);
+}
+
+/* text styles */
+.sd-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #042655;
+  margin-bottom: 0.8rem;
+}
+
+.sd-text {
+  font-size: 0.98rem;
+  line-height: 1.9;
+  color: #333;
+  margin-bottom: 0.7rem;
+}
+
+/* responsive */
+@media (max-width: 991.98px) {
+  .sd-title {
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .sd-text {
+    font-size: 0.9rem;
+  }
+}
+/* ===== CTA STRIP ===== */
+.cta-strip {
+  position: relative;
+  background-image: url("images/bg.jpg"); /* change path */
+  background-size: cover;
+  background-position: center;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* soft overlay */
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.65);   /* light wash over image */
+  z-index: 1;
+}
+
+/* keep content above overlay */
+.cta-strip .container,
+.cta-strip .row,
+.cta-strip .col-12,
+.cta-strip .col-lg-7,
+.cta-strip .col-lg-5 {
+  position: relative;
+  z-index: 2;
+}
+
+/* heading */
+.cta-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000;
+}
+
+/* button */
+.cta-btn {
+  background-color: #042655;
+  color: #ffffff;
+  padding: 0.8rem 2.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+/* hover state */
+.cta-btn:hover {
+  background-color: #ffb327;
+  color: #000;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+/* ===== responsive ===== */
+@media (max-width: 991.98px) {
+  .cta-strip {
+    min-height: 180px;
+    text-align: center;
+  }
+  .cta-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .cta-title {
+    font-size: 1.4rem;
+  }
+  .cta-btn {
+    padding-inline: 2rem;
+  }
+}
+
+</style>
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top main-navbar">
+  <div class="container">
+    <!-- Brand / Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="images/RAB LOGO.pdf" alt="Rab" class="nav-logo">
+      <!-- if logo already has text, you can remove this span -->
+      <!-- <span class="ms-2 fw-semibold">NEXXA CORPORATES</span> -->
+    </a>
+
+    <!-- Toggler for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+
+        <!-- Services dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown"
+             role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="servicesDropdown">
+            <li><a class="dropdown-item" href="#">Printing</a></li>
+            <li><a class="dropdown-item" href="#">Packing</a></li>
+            <li><a class="dropdown-item" href="#">Designing</a></li>
+            <li><a class="dropdown-item" href="#">Advertising</a></li>
+            <li><a class="dropdown-item" href="#">Social Media</a></li>
+            <li><a class="dropdown-item" href="#">Digital Marketing</a></li>
+            <li><a class="dropdown-item" href="#">Branding</a></li>
+            <li><a class="dropdown-item" href="#">Event</a></li>
+           
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">General Trading & IT</a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Blog</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- SERVICE DETAIL SECTIONS -->
+<section class="service-detail-section py-5">
+  <div class="container">
+   <h1 style="text-align: center;color:#042655;">Packaging</h1><br>
+    <!-- 1) IMAGE LEFT / TEXT RIGHT -->
+    <div class="row g-4 align-items-center mb-5">
+      <!-- Image -->
+      <div class="col-12 col-lg-4 order-1 order-lg-1">
+        <div class="sd-img-wrap">
+          <img src="images/design-prepress.jpg" alt="Design and Prepress" class="img-fluid">
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="col-12 col-lg-8 order-2 order-lg-2">
+        <h3 class="sd-title">Packaging Printing that Takes Your Brand Further</h3>
+        <p class="sd-text">
+        As one of the top 10 paper packaging companies in Dubai, we are trusted by discerning customers for a wide range of packaging printing solutions. Whether for commercial or personal needs, we specialize in printing and fabricating custom boxes, bags, wrappers, frames, sleeves, and jackets.
+
+We offer tailored packaging printing in Dubai for industries like cosmetics, personal care, food, chocolates, and confectionery, ensuring top-quality designs and durable materials.
+
+
+        </p>
+        <p class="sd-text mb-0">
+         Our Luxury Packaging Service caters to boutiques, specialty shops, product designers, and fashion experts, providing exquisite packaging for unique products. We also create personalized festival boxes and gift wraps for occasions like Ramadan, Eid, Diwali, Easter, Christmas, and New Year.
+
+For retail shops and restaurants, we produce durable, economical paper bags in various shapes and sizes. With our precision printing, sturdy construction, and premium materials, Veesham Printing Press is your go-to destination for packaging printing in Dubai.
+
+
+        </p>
+      </div>
+    </div>
+
+    <!-- 2) IMAGE RIGHT / TEXT LEFT -->
+    <div class="row g-4 align-items-center mb-5">
+      <!-- Image (right on desktop) -->
+      <div class="col-12 col-lg-4 order-1 order-lg-2">
+        <div class="sd-img-wrap">
+          <img src="images/images.jpg" alt="Cosmetic" class="img-fluid">
+        </div>
+      </div>
+
+      <!-- Text (left on desktop) -->
+      <div class="col-12 col-lg-8 order-2 order-lg-1">
+        <h3 class="sd-title">Customized Cosmetic Box Printing</h3>
+        <p class="sd-text">
+          offers you the best quality custom cosmetic box printing for your brand in a wide range of finishes and designs. We specialize in many intricate works like foiling in different colors and finishes like crystal UV, spot UV, and abrasive UV to give you unique boxes. You think it, we print it!!
+        </p>
+        
+      </div>
+    </div>
+
+    <!-- 3) IMAGE LEFT / TEXT RIGHT -->
+    <div class="row g-4 align-items-center mb-5">
+      <div class="col-12 col-lg-4 order-1 order-lg-1">
+        <div class="sd-img-wrap">
+          <img src="images/box.webp" alt="Boxes" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-8 order-2 order-lg-2">
+        <h3 class="sd-title">Boxes</h3>
+        <p class="sd-text">
+           offers you the best quality box printing for your products and services in a wide range of finishes and designs. We specialize in many intricate works like foiling in different colors and finishes like crystal UV, spot UV, and abrasive UV to give you unique boxes. You think it, we print it!!
+        </p>
+        
+      </div>
+    </div>
+
+    <!-- 4) IMAGE RIGHT / TEXT LEFT -->
+    <div class="row g-4 align-items-center">
+      <div class="col-12 col-lg-4 order-1 order-lg-2">
+        <div class="sd-img-wrap">
+          <img src="images/large-format.jpg" alt="Wrapping" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-8 order-2 order-lg-1">
+        <h3 class="sd-title">Personalized Wrapping Paper Printing</h3>
+        <p class="sd-text">
+          offers you the best quality wrapping paper printing for your brand in a wide range of finishes and designs. We have different paper qualities and sizes to give you unique wrapping sheets. You think it, we print it!!
+        </p>
+        
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section class="cta-strip">
+  <div class="cta-overlay"></div>
+
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 col-lg-7 text-center text-lg-start">
+        <h2 class="cta-title mb-0">
+          Have any project in mind? Let's talk!
+        </h2>
+      </div>
+
+      <div class="col-12 col-lg-5 text-center text-lg-end mt-3 mt-lg-0">
+        <a href="#contact" class="btn cta-btn">
+          Make An Appointment
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+  <div class="container py-5">
+    <div class="row gy-4">
+
+      <!-- 1) Logo + short text -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="footer-brand">
+          <!-- replace with your logo -->
+          <img src="assets/img/logo-white.png" alt="Company Logo" class="footer-logo mb-3">
+          <p class="footer-text">
+            We are a result-driven digital marketing and branding agency focused on helping
+            businesses scale with data-backed strategies and creative solutions.
+          </p>
+          <div class="footer-social d-flex gap-2">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2) Quick Links -->
+      <div class="col-6 col-md-3 col-lg-2">
+        <h5 class="footer-title">Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- 3) Services -->
+      <div class="col-6 col-md-3 col-lg-3">
+        <h5 class="footer-title">Services</h5>
+        <ul class="footer-links">
+          <li><a href="#">Digital Marketing</a></li>
+          <li><a href="#">Branding &amp; Design</a></li>
+          <li><a href="#">Social Media Management</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Consulting</a></li>
+        </ul>
+      </div>
+
+      <!-- 4) Contact -->
+      <div class="col-12 col-lg-3">
+        <h5 class="footer-title">Contact</h5>
+        <ul class="footer-contact">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>2nd Floor, Your Business Center, Kochi, Kerala, India</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+916238300379">+91 62 38 300 379</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@yourcompany.com">info@yourcompany.com</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer-bottom">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p class="mb-0">© <span id="yearSpan"></span> Your Company Name. All Rights Reserved.</p>
+      <p class="mb-0 small">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a> |
+        <a href="#" class="footer-bottom-link">Terms &amp; Conditions</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    
+</body>
+</html>

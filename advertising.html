@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rab Services Advertising</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/blog.css">
+     
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+</head>
+<style>
+    .page-hero {
+  position: relative;
+  background-image: url("images/bg1.jpg"); /* your image path */
+  background-size: cover;
+  background-position: center;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  margin-top: 0;
+}
+
+
+
+
+
+/* ===== CTA STRIP ===== */
+.cta-strip {
+  position: relative;
+  background-image: url("images/bg.jpg"); /* change path */
+  background-size: cover;
+  background-position: center;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* soft overlay */
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.65);   /* light wash over image */
+  z-index: 1;
+}
+
+/* keep content above overlay */
+.cta-strip .container,
+.cta-strip .row,
+.cta-strip .col-12,
+.cta-strip .col-lg-7,
+.cta-strip .col-lg-5 {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* heading */
+.cta-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000;
+}
+
+/* button */
+.cta-btn {
+  background-color: #042655;
+  color: #ffffff;
+  padding: 0.8rem 2.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+/* hover state */
+.cta-btn:hover {
+  background-color: #ffb327;
+  color: #000;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+/* ===== responsive ===== */
+@media (max-width: 991.98px) {
+  .cta-strip {
+    min-height: 180px;
+    text-align: center;
+  }
+  .cta-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .cta-title {
+    font-size: 1.4rem;
+  }
+  .cta-btn {
+    padding-inline: 2rem;
+  }
+}
+
+
+
+
+/* INTRO */
+.service-tag {
+  color: #ffb327;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.service-title-large {
+  font-weight: 800;
+  font-size: 2.1rem;
+  color: #042655;
+}
+
+.service-text {
+  color: #444;
+  line-height: 1.7;
+}
+
+.service-img-wrap {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.service-img {
+  width: 100%;
+  height: auto;
+  transition: 0.3s ease;
+}
+
+.service-img:hover {
+  transform: scale(1.05);
+}
+
+
+
+/* AD TYPE CARD */
+.ad-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.9rem 1.3rem;
+  text-align: center;
+  border: 1px solid #e8ebf5;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.ad-card:hover {
+  transform: translateY(-6px);
+  border-color: #042655;
+  box-shadow: 0 16px 32px rgba(0,0,0,0.12);
+}
+
+.ad-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #042655;
+  color: #fff;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px;
+  transition: 0.3s ease;
+}
+
+.ad-card:hover .ad-icon {
+  background: #ffb327;
+  color: #000;
+}
+
+.ad-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #042655;
+}
+
+.ad-text {
+  font-size: 0.92rem;
+  color: #444;
+}
+
+
+
+/* WHY SECTION */
+.why-title {
+  font-weight: 800;
+  font-size: 1.9rem;
+  color: #042655;
+}
+
+.why-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.why-list li {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.why-list i {
+  margin-right: 10px;
+  color: #ffb327;
+}
+
+.why-img-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.why-img {
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.why-img:hover {
+  transform: scale(1.05);
+}
+
+
+
+/* PROCESS */
+.process-box {
+  background: #ffffff;
+  padding: 1.8rem 1.4rem;
+  border-radius: 16px;
+  border: 1px solid #e2e5f1;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.process-num {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #042655;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.process-box:hover {
+  transform: translateY(-6px);
+  border-color: #042655;
+}
+
+
+
+/* CTA already styled */
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top main-navbar">
+  <div class="container">
+    <!-- Brand / Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="images/RAB LOGO.pdf" alt="Rab" class="nav-logo">
+      <!-- if logo already has text, you can remove this span -->
+      <!-- <span class="ms-2 fw-semibold">NEXXA CORPORATES</span> -->
+    </a>
+
+    <!-- Toggler for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+
+        <!-- Services dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown"
+             role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="servicesDropdown">
+            <li><a class="dropdown-item" href="#">Printing</a></li>
+            <li><a class="dropdown-item" href="#">Packing</a></li>
+            <li><a class="dropdown-item" href="#">Designing</a></li>
+            <li><a class="dropdown-item" href="#">Advertising</a></li>
+            <li><a class="dropdown-item" href="#">Social Media</a></li>
+            <li><a class="dropdown-item" href="#">Digital Marketing</a></li>
+            <li><a class="dropdown-item" href="#">Branding</a></li>
+            <li><a class="dropdown-item" href="#">Event</a></li>
+           
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">General Trading & IT</a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Blog</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+<!-- HERO -->
+<section class="page-hero service-hero">
+  <div class="page-hero-overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="page-hero-title">Advertising Services</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center page-hero-breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active">Advertising</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- ABOUT ADVERTISING -->
+<section class="service-intro py-5">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      
+      <!-- LEFT TEXT -->
+      <div class="col-12 col-lg-6">
+        <h5 class="service-tag">Grow Faster With Smart Advertising</h5>
+        <h2 class="service-title-large">
+          Creative, Targeted & Result-Driven Advertising Solutions
+        </h2>
+        <p class="service-text">
+          Whether you’re launching a new product, promoting an event, or building long-term brand recall, 
+          our advertising solutions ensure maximum visibility and measurable outcomes.
+        </p>
+        <p class="service-text">
+          From local market promotions to digital ad campaigns, we execute customised strategies that help 
+          your business stand out in a competitive landscape.
+        </p>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="col-12 col-lg-6">
+        <div class="service-img-wrap">
+          <img src="images/ad-1.jpg" class="service-img" alt="Advertising">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- TYPES OF ADVERTISING -->
+<section class="ad-types-section py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h3 class="service-heading">Types of Advertising We Provide</h3>
+      <p class="service-subtext">
+        We deliver high-impact advertising services through various media channels.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- 1 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="ad-card">
+          <div class="ad-icon"><i class="fa-solid fa-bullhorn"></i></div>
+          <h5 class="ad-title">Outdoor Advertising</h5>
+          <p class="ad-text">
+            Billboards, hoardings, pole kiosks, and transit ads for mass visibility.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="ad-card">
+          <div class="ad-icon"><i class="fa-solid fa-tv"></i></div>
+          <h5 class="ad-title">Digital Advertising</h5>
+          <p class="ad-text">
+            Google Ads, Meta Ads, display campaigns, remarketing and more.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="ad-card">
+          <div class="ad-icon"><i class="fa-solid fa-radio"></i></div>
+          <h5 class="ad-title">Print & Media</h5>
+          <p class="ad-text">
+            Newspaper ads, magazines, radio campaigns and media placements.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="ad-card">
+          <div class="ad-icon"><i class="fa-solid fa-shop"></i></div>
+          <h5 class="ad-title">In-Store Branding</h5>
+          <p class="ad-text">
+            POS displays, danglers, wall graphics, floor branding & product signage.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- WHY CHOOSE US FOR ADVERTISING -->
+<section class="why-advertising py-5">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- LEFT IMAGE -->
+      <div class="col-12 col-lg-6 order-2 order-lg-1">
+        <div class="why-img-wrap">
+          <img src="images/about-3.png" class="why-img" alt="">
+        </div>
+      </div>
+
+      <!-- RIGHT TEXT -->
+      <div class="col-12 col-lg-6 order-1 order-lg-2">
+        <h3 class="why-title">Why Choose Our Advertising Services?</h3>
+        <ul class="why-list">
+          <li><i class="fa-solid fa-check"></i>Creative concepts that grab attention</li>
+          <li><i class="fa-solid fa-check"></i>Cost-efficient media planning</li>
+          <li><i class="fa-solid fa-check"></i>Precise audience targeting</li>
+          <li><i class="fa-solid fa-check"></i>Consistent brand messaging</li>
+          <li><i class="fa-solid fa-check"></i>Proven ROI-driven strategies</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- PROCESS -->
+<section class="process-section py-5">
+  <div class="container text-center">
+    <h3 class="service-heading mb-4">Our Advertising Process</h3>
+
+    <div class="row g-4">
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="process-box">
+          <span class="process-num">01</span>
+          <h5>Understanding Your Goal</h5>
+          <p>We analyse your brand, market and objectives.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="process-box">
+          <span class="process-num">02</span>
+          <h5>Creative Development</h5>
+          <p>Our team creates high-impact ad creatives.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="process-box">
+          <span class="process-num">03</span>
+          <h5>Media Planning</h5>
+          <p>We choose the best platforms & placements.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="process-box">
+          <span class="process-num">04</span>
+          <h5>Execution & Tracking</h5>
+          <p>Campaigns go live with real-time monitoring.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- CTA -->
+<section class="cta-strip">
+  <div class="cta-overlay"></div>
+
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 col-lg-7 text-center text-lg-start">
+        <h2 class="cta-title mb-0">
+          Ready to advertise your brand with high impact?
+        </h2>
+      </div>
+
+      <div class="col-12 col-lg-5 text-center text-lg-end mt-3 mt-lg-0">
+        <a href="#contact" class="btn cta-btn">
+          Contact Us Today
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+  <div class="container py-5">
+    <div class="row gy-4">
+
+      <!-- 1) Logo + short text -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="footer-brand">
+          <!-- replace with your logo -->
+          <img src="assets/img/logo-white.png" alt="Company Logo" class="footer-logo mb-3">
+          <p class="footer-text">
+            We are a result-driven digital marketing and branding agency focused on helping
+            businesses scale with data-backed strategies and creative solutions.
+          </p>
+          <div class="footer-social d-flex gap-2">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2) Quick Links -->
+      <div class="col-6 col-md-3 col-lg-2">
+        <h5 class="footer-title">Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- 3) Services -->
+      <div class="col-6 col-md-3 col-lg-3">
+        <h5 class="footer-title">Services</h5>
+        <ul class="footer-links">
+          <li><a href="#">Digital Marketing</a></li>
+          <li><a href="#">Branding &amp; Design</a></li>
+          <li><a href="#">Social Media Management</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Consulting</a></li>
+        </ul>
+      </div>
+
+      <!-- 4) Contact -->
+      <div class="col-12 col-lg-3">
+        <h5 class="footer-title">Contact</h5>
+        <ul class="footer-contact">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>2nd Floor, Your Business Center, Kochi, Kerala, India</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+916238300379">+91 62 38 300 379</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@yourcompany.com">info@yourcompany.com</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer-bottom">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p class="mb-0">© <span id="yearSpan"></span> Your Company Name. All Rights Reserved.</p>
+      <p class="mb-0 small">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a> |
+        <a href="#" class="footer-bottom-link">Terms &amp; Conditions</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    
+</body>
+</html>
