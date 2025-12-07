@@ -32,6 +32,239 @@
 
 
 
+/* hero banner */
+.digital-hero {
+  background-image: url("images/dm-hero.jpg"); /* update path */
+}
+
+/* intro list */
+.dm-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.dm-list li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.dm-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: -0.05rem;
+  color: #ffb327;
+  font-size: 1.3rem;
+}
+
+/* headings */
+.dm-heading {
+  font-weight: 800;
+  color: #042655;
+}
+
+.dm-subtext {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 0.96rem;
+}
+
+/* service cards */
+.dm-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.8rem 1.4rem;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.05);
+  border: 1px solid #e0e3f2;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: 0.25s ease;
+}
+
+.dm-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #042655, #ffb327);
+  transition: width 0.25s ease;
+}
+
+.dm-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #042655;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  transition: 0.25s ease;
+}
+
+.dm-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #042655;
+  margin-bottom: 0.4rem;
+}
+
+.dm-text {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0;
+}
+
+/* hover */
+.dm-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.14);
+  border-color: #042655;
+}
+
+.dm-card:hover::before {
+  width: 100%;
+}
+
+.dm-card:hover .dm-icon {
+  background: #ffb327;
+  color: #000;
+}
+
+/* performance section */
+.dm-performance-section {
+  background-color: #ffffff;
+}
+
+.dm-perf-img-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.dm-perf-img {
+  width: 100%;
+  height: auto;
+  transition: 0.4s ease;
+}
+
+.dm-perf-img:hover {
+  transform: scale(1.05);
+}
+
+.dm-perf-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.dm-perf-list li {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.dm-perf-list i {
+  color: #ffb327;
+  margin-right: 0.5rem;
+}
+
+/* process */
+.dm-process-section {
+  background-color: #f8f9ff;
+}
+
+.dm-process-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.8rem 1.4rem;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.05);
+  border: 1px solid #e1e4f1;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: 0.25s ease;
+  text-align: left;
+}
+
+.dm-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #042655;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.dm-process-box h5 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #042655;
+  margin-bottom: 0.4rem;
+}
+
+.dm-process-box p {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0;
+}
+
+/* bottom gradient bar */
+.dm-process-box::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #042655, #ffb327);
+  transition: width 0.25s ease;
+}
+
+.dm-process-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+  border-color: #042655;
+}
+
+.dm-process-box:hover::after {
+  width: 100%;
+}
+
+/* responsive tweaks */
+@media (max-width: 991.98px) {
+  .service-title-large {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .service-title-large {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+
+
+
 /* ===== CTA STRIP ===== */
 .cta-strip {
   position: relative;
@@ -178,6 +411,255 @@
   </div>
 </nav>
 
+
+
+
+<!-- HERO -->
+<section class="page-hero digital-hero">
+  <div class="page-hero-overlay"></div>
+  <div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+      <div class="col-12 text-center">
+        <h1 class="page-hero-title">Digital Marketing</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb page-hero-breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="services.html">Services</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Digital Marketing</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO: TEXT LEFT / IMAGE RIGHT -->
+<section class="dm-intro-section py-5">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+
+      <!-- TEXT -->
+      <div class="col-12 col-lg-6">
+        <h5 class="service-tag">Performance-Driven Growth</h5>
+        <h2 class="service-title-large">
+          Integrated Digital Marketing That Brings You Real Business Results
+        </h2>
+        <p class="service-text">
+          We create performance-focused digital marketing campaigns that increase your visibility,
+          drive qualified traffic and convert visitors into leads and customers.
+        </p>
+        <p class="service-text">
+          Our team combines strategy, creative and analytics across channels – so every click,
+          impression and enquiry is aligned with your business goals.
+        </p>
+        <ul class="dm-list">
+          <li>End-to-end digital strategy &amp; planning</li>
+          <li>Campaigns optimised for leads, sales &amp; brand recall</li>
+          <li>Transparent reports and measurable ROI</li>
+        </ul>
+      </div>
+
+      <!-- IMAGE -->
+      <div class="col-12 col-lg-6">
+        <div class="service-img-wrap">
+          <img src="images/dm-main.jpg" alt="Digital marketing" class="service-img">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DIGITAL SERVICES GRID -->
+<section class="dm-services-section py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h3 class="dm-heading">Digital Marketing Services We Offer</h3>
+      <p class="dm-subtext">
+        A complete mix of performance and brand marketing so you don’t need to manage multiple agencies.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- SEO -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="dm-card">
+          <div class="dm-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <h5 class="dm-title">Search Engine Optimisation (SEO)</h5>
+          <p class="dm-text">
+            On-page, technical and off-page SEO to improve rankings, organic traffic and visibility.
+          </p>
+        </div>
+      </div>
+
+      <!-- Performance Ads -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="dm-card">
+          <div class="dm-icon"><i class="fa-solid fa-square-poll-vertical"></i></div>
+          <h5 class="dm-title">Performance Ads (Google &amp; Meta)</h5>
+          <p class="dm-text">
+            Search, display and social campaigns focused on lead generation, enquiries and sales.
+          </p>
+        </div>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="dm-card">
+          <div class="dm-icon"><i class="fa-solid fa-hashtag"></i></div>
+          <h5 class="dm-title">Social Media Marketing</h5>
+          <p class="dm-text">
+            Content, creatives and paid campaigns across key platforms to grow your community.
+          </p>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="dm-card">
+          <div class="dm-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+          <h5 class="dm-title">Content &amp; Blogging</h5>
+          <p class="dm-text">
+            Website content, landing pages and blogs optimised for both search engines and humans.
+          </p>
+        </div>
+      </div>
+
+      <!-- Email & Automation -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="dm-card">
+          <div class="dm-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+          <h5 class="dm-title">Email &amp; Marketing Automation</h5>
+          <p class="dm-text">
+            Nurture flows, drip campaigns and newsletters to stay top-of-mind with your audience.
+          </p>
+        </div>
+      </div>
+
+      <!-- Analytics -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="dm-card">
+          <div class="dm-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h5 class="dm-title">Analytics &amp; Reporting</h5>
+          <p class="dm-text">
+            Tracking, dashboards and insights so you know exactly what’s working.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERFORMANCE FOCUS SECTION -->
+<section class="dm-performance-section py-5">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      
+      <!-- IMAGE LEFT -->
+      <div class="col-12 col-lg-5 order-1 order-lg-1">
+        <div class="dm-perf-img-wrap">
+          <img src="images/dm-performance.jpg" alt="Performance marketing" class="dm-perf-img">
+        </div>
+      </div>
+
+      <!-- TEXT RIGHT -->
+      <div class="col-12 col-lg-7 order-2 order-lg-2">
+        <h3 class="dm-heading mb-3">Performance-Driven, Not Just Click-Driven</h3>
+        <p class="service-text">
+          We don’t chase vanity metrics. Our focus is on meaningful conversions – quality leads, 
+          sales and long-term brand equity.
+        </p>
+
+        <div class="row g-3 mt-2">
+          <div class="col-6">
+            <ul class="dm-perf-list">
+              <li><i class="fa-solid fa-check"></i> Clear goals &amp; KPIs</li>
+              <li><i class="fa-solid fa-check"></i> Proper tracking &amp; pixels</li>
+              <li><i class="fa-solid fa-check"></i> Optimised landing pages</li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul class="dm-perf-list">
+              <li><i class="fa-solid fa-check"></i> A/B testing on creatives</li>
+              <li><i class="fa-solid fa-check"></i> Budget optimisation</li>
+              <li><i class="fa-solid fa-check"></i> Transparent monthly reports</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="dm-process-section py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h3 class="dm-heading">Our Digital Marketing Process</h3>
+      <p class="dm-subtext">
+        A structured approach so every campaign is planned, executed and improved systematically.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- 1 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="dm-process-box">
+          <span class="dm-step-num">01</span>
+          <h5>Audit &amp; Strategy</h5>
+          <p>We review your current presence, define goals and build a digital roadmap.</p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="dm-process-box">
+          <span class="dm-step-num">02</span>
+          <h5>Setup &amp; Tracking</h5>
+          <p>We set up accounts, pixels, events and dashboards for accurate data.</p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="dm-process-box">
+          <span class="dm-step-num">03</span>
+          <h5>Campaigns &amp; Content</h5>
+          <p>We launch campaigns and content pieces across the selected channels.</p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="dm-process-box">
+          <span class="dm-step-num">04</span>
+          <h5>Optimise &amp; Scale</h5>
+          <p>We constantly refine targeting, creatives and budgets to improve ROI.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-strip">
+  <div class="cta-overlay"></div>
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 col-lg-7 text-center text-lg-start">
+        <h2 class="cta-title mb-0">
+          Ready to grow your business with digital marketing?
+        </h2>
+      </div>
+      <div class="col-12 col-lg-5 text-center text-lg-end mt-3 mt-lg-0">
+        <a href="#contact" class="btn cta-btn">
+          Request a Digital Strategy Call
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
